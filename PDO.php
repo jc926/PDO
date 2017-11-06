@@ -33,14 +33,15 @@ catch(PDOException $e)
     echo"<br><br>";
     echo "<html>";
     echo "<body>";
-    echo "<div style='overflow-x:auto;'>";
+    echo "<table style='border: solid 1px black;'>";
+    echo "<tr><th>id</th><th>email</th><th>Firstname</th><th>Lastname<th>phone</th><th>birthday</th><th>gender</th><th>password</th></tr>";
         foreach ($result as $row) {
               echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td><td>".$row["phone"]."</td><td>".$row["birthday"]."</td><td>".$row["gender"]."</td><td>".$row["password"]."</td></tr>";
            
             }
                       
 
-        echo "</table></div>";
+        echo "</table>";
         echo "</body>";
         echo "</html>";	
         
